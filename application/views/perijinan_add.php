@@ -2,18 +2,35 @@
     <section class="content">
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 ">
                 <section class="panel">
-                    <header class="panel-heading">Tambah Perijinan</header>
-                    <div class="panel-body">
-                        <form class="form-horizontal tasi-form" method="post" action="perijinan_add_submit.php?id= <? echo $no_spj; ?> ">
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">No. SPJ</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="var_no_spj" id="var_no_spj" disabled value="">
-                                </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-1 col-lg-10">
+                            <button onclick="goBack() " class="btn btn-info">Kembali</button>
+                            <script>
+                                function goBack() {
+                                    window.history.back();
+                                }
+                            </script>
 
+                        </div>
+                    </div>
+
+
+                    <div class="panel-body">
+
+                        <form action="<?php echo base_url() . 'perijinan_add/update'; ?>" method="post">
+
+                            <div class="form-group">
+                                <?php foreach ($perijinan_add as $pa) { ?>
+                                    <label class="col-sm-2 col-sm-2 control-label">No. SPJ</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="var_no_spj" id="var_no_spj" disabled value="<?php echo $pa->spj_no ?>">
+                                    </div>
+                                <?php } ?>
                             </div>
+
+
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">No. Surat Ke PTSP</label>
@@ -58,10 +75,11 @@
 
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
+                                    <button type="reset" class="btn btn-danger">Reset</button>
                                     <button name="Submit" type="submit" class="btn btn-info">Submit</button>
+
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </section>
