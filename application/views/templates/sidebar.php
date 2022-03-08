@@ -40,7 +40,7 @@
         </ul>
       </li>
 
-      <li class="treeview <?= $this->uri->segment(1) == 'kontrol_fin/tambah_addendum' || $this->uri->segment(1) == 'kontrol_fin/tambah'
+      <li class="treeview <?= $this->uri->segment(1) == 'inp_addendum' || $this->uri->segment(1) == 'inp_spj_fin'
                             || $this->uri->segment(1) == 'kontrol_fin' || $this->uri->segment(1) == 'list_amandemen' ? 'active' : '' ?>">
         <a href="#">
           <i class="fa fa-table"></i> <span>Pengelolaan Vendor</span>
@@ -49,17 +49,15 @@
           </span>
         </a>
         <ul class="treeview-menu">
-
-          <li><a href="<?php echo base_url('inp_addendum') ?>"><i class="fa fa-circle-o"></i> Addendum</a></li>
-          <li><a href="<?php echo base_url('inp_spj_fin') ?>"><i class="fa fa-circle-o"></i> Input SPJ</a></li>
-          <li><a href="<?php echo base_url('kontrol_fin') ?>"><i class="fa fa-circle-o"></i> Kontrol Finansial</a></li>
-          <li><a href="<?php echo base_url('list_amandemen') ?>"><i class="fa fa-circle-o"></i> List Amandemen</a></li>
-
-
+          <li <?= $this->uri->segment(1) == 'inp_addendum' ? 'class="active"' : '' ?>><a href="<?php echo base_url('inp_addendum') ?>"><i class="fa fa-circle-o"></i> Addendum</a></li>
+          <li <?= $this->uri->segment(1) == 'inp_spj_fin' ? 'class="active"' : '' ?>><a href="<?php echo base_url('inp_spj_fin') ?>"><i class="fa fa-circle-o"></i> Input SPJ</a></li>
+          <li <?= $this->uri->segment(1) == 'kontrol_fin' ? 'class="active"' : '' ?>><a href="<?php echo base_url('kontrol_fin') ?>"><i class="fa fa-circle-o"></i> Kontrol Finansial</a></li>
+          <li <?= $this->uri->segment(1) == 'list_amandemen' ? 'class="active"' : '' ?>><a href="<?php echo base_url('list_amandemen') ?>"><i class="fa fa-circle-o"></i> List Amandemen</a></li>
         </ul>
       </li>
 
-      <li class="treeview<?= $this->uri->segment(1) == '' || $this->uri->segment(1) == '' ? 'active' : '' ?>">
+      <li class="treeview <?= $this->uri->segment(1) == 'ba_survey' || $this->uri->segment(1) == 'monitoring' || $this->uri->segment(1) == 'pengajuan'
+                            || $this->uri->segment(1) == 'perijinan' || $this->uri->segment(1) == 'retribusi' || $this->uri->segment(1) == 'skrd' ? 'active' : '' ?>">
         <a href="#">
           <i class="fa fa-copy"></i> <span>Pengelolaan Perizinan</span>
           <span class="pull-right-container">
@@ -67,12 +65,12 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo base_url('ba_survey') ?>"><i class="fa fa-circle-o"></i> BA Survey</a></li>
-          <li><a href="<?php echo base_url('monitoring') ?>"><i class="fa fa-circle-o"></i> Monitoring Perizinan</a></li>
-          <li><a href="<?php echo base_url('pengajuan') ?>"><i class="fa fa-circle-o"></i> Pengajuan Perizinan Baru</a></li>
-          <li><a href="<?php echo base_url('perijinan') ?>"><i class="fa fa-circle-o"></i> Perizinan</a></li>
-          <li><a href="<?php echo base_url('retribusi') ?>"><i class="fa fa-circle-o"></i> Retribusi</a></li>
-          <li><a href="<?php echo base_url('skrd') ?>"><i class="fa fa-circle-o"></i> SKRD</a></li>
+          <li <?= $this->uri->segment(1) == 'ba_survey' ? 'class="active"' : '' ?>><a href="<?php echo base_url('ba_survey') ?>"><i class="fa fa-circle-o"></i> BA Survey</a></li>
+          <li <?= $this->uri->segment(1) == 'monitoring' ? 'class="active"' : '' ?>><a href="<?php echo base_url('monitoring') ?>"><i class="fa fa-circle-o"></i> Monitoring Perizinan</a></li>
+          <li <?= $this->uri->segment(1) == 'pengajuan' ? 'class="active"' : '' ?>><a href="<?php echo base_url('pengajuan') ?>"><i class="fa fa-circle-o"></i> Pengajuan Perizinan Baru</a></li>
+          <li <?= $this->uri->segment(1) == 'perijinan' ? 'class="active"' : '' ?>><a href="<?php echo base_url('perijinan') ?>"><i class="fa fa-circle-o"></i> Perizinan</a></li>
+          <li <?= $this->uri->segment(1) == 'retribusi' ? 'class="active"' : '' ?>><a href="<?php echo base_url('retribusi') ?>"><i class="fa fa-circle-o"></i> Retribusi</a></li>
+          <li <?= $this->uri->segment(1) == 'skrd' ? 'class="active"' : '' ?>><a href="<?php echo base_url('skrd') ?>"><i class="fa fa-circle-o"></i> SKRD</a></li>
         </ul>
       </li>
 
