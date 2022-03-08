@@ -36,7 +36,7 @@
                                     <div class="col-sm-10">
 
                                         <input type="text" name="spj" id="spj" placeholder="Masukan nama SPJ" class="form-control">
-                                        <?= form_error('var_no_spj', '<small class="text-danger">', '</small>'); ?>
+                                        <?= form_error('spj', '<small class="text-danger">', '</small>'); ?>
                                     </div>
                                 </div>
 

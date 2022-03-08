@@ -72,7 +72,7 @@
                                             <select class="form-control m-b-10" name="var_no_skkio">
                                                 <option value="0">-- SKKI/SKKO --</option>
                                                 <?php foreach ($skk as $sk) : ?>
-                                                    <option value="<?php echo $sk->SKKI_ID; ?>"> <?php echo $sk->SKKI_NO; ?></option>
+                                                    <option value="<?php echo $sk->SKKI_NO; ?>"> <?php echo $sk->SKKI_NO; ?></option>
                                                 <?php endforeach; ?>
 
                                             </select>

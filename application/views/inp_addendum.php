@@ -95,7 +95,7 @@
                                                 <select class="form-control m-b-10" name="var_skki_tujuan" id="skki_tujuan">
                                                     <option value="-">- (Pilih Jika SKKI/O Tidak Berubah)</option>
                                                     <?php foreach ($skkio as $skk) : ?>
-                                                        <option value="<?php echo $skk->SKKI_ID; ?>"> <?php echo $skk->SKKI_NO; ?></option>
+                                                        <option value="<?php echo $skk->SKKI_NO; ?>"> <?php echo $skk->SKKI_NO; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>

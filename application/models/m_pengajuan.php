@@ -23,7 +23,7 @@ class m_pengajuan extends CI_Model
         $this->db->like('SPJ_NO', $title);
         $this->db->order_by('SPJ_NO', 'ASC');
         $this->db->limit(10);
-        return $this->db->get('tb_spj')->result();
+        return $this->db->get('tb_dokumen')->result();
     }
 
     public function spj_no()
