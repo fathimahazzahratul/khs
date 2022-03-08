@@ -31,13 +31,13 @@ class chart extends CI_Controller
 
     function getBarChart(){
         $area_kode=$this->input->get('area_kode');
-        $tahun=$this->input->get('tahun');
-        $tmp_tahun = substr($tahun,1,4);
+        $tahun_paket=$this->input->get('tahun_paket');
+        $tmp_tahun = substr($tahun_paket,1,4);
 
         $get = $this->m_chart->jml_paket($area_kode, $tmp_tahun);
         echo json_encode($get);
         // print_r($get);
-//echo $tmp_tahun;
+        //echo $tmp_tahun;
     }
 
     function getLineChart2(){
@@ -58,6 +58,13 @@ class chart extends CI_Controller
         $get = $this->m_chart->tahun();
         echo json_encode($get);
     }
+
+    function getTahunPaket(){
+        $get = $this->m_chart->tahun_paket();
+        echo json_encode($get);
+    }
+
+    
 
     function getPaket(){
         $tahun = $this->input->get('tahun');

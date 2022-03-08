@@ -59,7 +59,7 @@
                   </div>
 
                   <div class="col-md-4">
-                    <select name="tahun_paket" class="form-control tahun_paket"></select>
+                    <select name="tahun" class="form-control tahun"></select>
                   </div>
 
                   <div class="col-md-1">
@@ -128,7 +128,6 @@
       getArea();
       getTahun();
       getAreaGangguan() ;
-      getTahunPaket();
       // getPaket();
 
       $('[name="btn-filter"]').on('click', function () {
@@ -187,22 +186,6 @@
               html += '<option value="'+val.tahun+'">'+val.tahun+'</option>';
             });
             $('.tahun').html(html);
-          }
-        });
-      }
-
-      function getTahunPaket(){
-        $.ajax({
-          type: "POST",
-          url: "<?php echo base_url(); ?>/chart/getTahunPaket",
-          data: "data",
-          dataType: "JSON",
-          success: function (data) {
-            var html = '';
-            $.each(data, function (i, val) { 
-              html += '<option value="'+val.tahun+'">'+val.tahun+'</option>';
-            });
-            $('.tahun_paket').html(html);
           }
         });
       }
