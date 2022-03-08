@@ -1,6 +1,6 @@
 <?php
 
-class m_monitoring extends CI_Model
+class m_monitoring_add extends CI_Model
 {
 
     public function tampil_data()

@@ -1,22 +1,22 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
 
-class retribusi extends CI_Controller
+
+class monitoring_add extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_retribusi');
+        $this->load->model('m_monitoring_add');
     }
 
     public function index()
     {
-        $data['retri'] = $this->m_retribusi->getdata();
+        /* $where = array('spj_no' => $spj_no); */
         $data['title'] = "Upload Multifile";
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
-        $this->load->view('retribusi', $data);
+        $this->load->view('monitoring_add');
         $this->load->view('templates/footer');
     }
 

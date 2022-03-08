@@ -18,4 +18,15 @@ class monitoring extends CI_Controller
         $this->load->view('monitoring', $data);
         $this->load->view('templates/footer');
     }
+
+    public function monitoring_add()
+    {
+        $this->load->model('m_monitoring');
+        $monitoring_add = $this->m_monitoring->monitoring_add();
+        $data['monitoring_add'] = $monitoring_add;
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('monitoring_add', $data);
+        $this->load->view('templates/footer');
+    }
 }
