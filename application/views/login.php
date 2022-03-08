@@ -77,6 +77,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
       </form>
+      
       <!-- /.col -->
       <div class="col-xs-4">
         <button type="submit" class="btn btn-primary ">Sign In</button>
@@ -85,6 +86,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <!-- /.col -->
     </div>
     </form>
+
+    <div class="social-auth-links text-center mb-3">
+<p>- OR -</p>
+<a href="#" class="btn btn-block btn-primary">
+<i class="fab fa-bolt mr-2"></i> Sign in using IAM PLN
+</a>
+
+</div>
 
     <script type="text/javascript">
       $(document).ready(function() {
