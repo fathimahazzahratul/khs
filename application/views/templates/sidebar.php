@@ -5,10 +5,10 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="<?php echo base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
+        <img src="<?php echo base_url() ?>assets/dist/img/pln.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Admin</p>
+        <!-- <p>Admin</p> -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
@@ -18,7 +18,7 @@
       <li class="header">MAIN NAVIGATION</li>
       <li <?= $this->uri->segment(1) == 'chart' || $this->uri->segment(1) == '' || $this->uri->segment(2) == '' ? 'class="active"' : '' ?>>
         <a href="<?php echo base_url('chart') ?>">
-          <i class="fa fa-bar-chart"></i> <span>Chart</span>
+          <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
 

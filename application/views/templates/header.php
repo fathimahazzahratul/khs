@@ -34,7 +34,7 @@
   <link rel="stylesheet" type=text/css href="<?php echo base_url() ?>assets/css/jquery-ui.css">
 
   <!-- drop and drag -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,600italic"> -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
@@ -86,6 +86,17 @@
   <script src="<?php echo base_url() ?>assets/dist/js/pages/dashboard.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?php echo base_url() ?>assets/dist/js/demo.js"></script>
+
+  <!-- autocomplete -->
+  <!-- <script src="<?php echo base_url() ?>assets/js/jquery-3.3.1.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>-->
+  <script src="<?php echo base_url() ?>assets/js/jquery-ui.js"></script>
+
+  <!-- drop and drag -->
+  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+
 
   <!-- <link href="https://code.highcharts.com/css/highcharts.css" rel="stylesheet"> -->
   <style>
@@ -171,7 +182,7 @@
                       <!-- start message -->
                       <a href="#">
                         <div class="pull-left">
-                          <img src="<?php echo base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
+                          <img src="<?php echo base_url() ?>assets/dist/img/pln.png" class="img-circle" alt="User Image">
                         </div>
                         <h4>
                           Support Team
@@ -315,16 +326,16 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<?php echo base_url() ?>assets/dist/img/avatar5.png" class="user-image" alt="User Image">
-                <span class="hidden-xs">Admin </span>
+                <img src="<?php echo base_url() ?>assets/dist/img/user1.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs"><?php echo $this->session->userdata("username") ?> </span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="<?php echo base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
+                  <img src="<?php echo base_url() ?>assets/dist/img/user1.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    Admin
+                  <?php echo $this->session->userdata("username") ?>
 
                   </p>
                 </li>

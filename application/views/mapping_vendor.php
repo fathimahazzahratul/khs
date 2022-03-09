@@ -127,7 +127,7 @@
 
             <div class="form-group">
               <label>Paket</label>
-              <select class="form-control m-b-10" name="jns_paket" id="PAKET_JENIS">
+              <select class=select2 class="form-control m-b-10" name="jns_paket" id="PAKET_JENIS">
                 <option selected="0">-- Paket Deskripsi --</option>
                 <?php foreach ($jenis_paket as $jp) : ?>
                   <option value="<?php echo $jp->PAKET_JENIS; ?>"> <?php echo $jp->PAKET_DESKRIPSI; ?></option>

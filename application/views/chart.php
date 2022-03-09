@@ -200,7 +200,7 @@
           success: function (data) {
             var html = '';
             $.each(data, function (i, val) { 
-              html += '<option value="'+val.tahun+'">'+val.tahun+'</option>';
+              html += '<option value="'+val.tahun_paket+'">'+val.tahun_paket+'</option>';
             });
             $('.tahun_paket').html(html);
           }

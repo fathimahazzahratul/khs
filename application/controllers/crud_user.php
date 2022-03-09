@@ -80,4 +80,15 @@ class crud_user extends CI_Controller
         $this->load->view('detail_crud_user', $data);
         $this->load->view('templates/footer');
     }
+
+    public function aktif($username='')
+    {
+        $this->db->query("UPDATE tb_user SET USER_STATUS='1' where username='$username'");
+        redirect('crud_user/index');
+    }
+    public function non($username='')
+    {
+        $this->db->query("UPDATE tb_user SET USER_STATUS='0' where username='$username'");
+        redirect('crud_user/index');
+    }
 }

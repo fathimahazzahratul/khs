@@ -19,12 +19,18 @@
                         <font size="2" face="Arial">
                             <table id="example" class="table table-striped table-bordered table-responsive" cellspacing="0">
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Tambah Data User</button>
+                               <br>
+                               <br>
                                 <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Username</th>
                                         <th>ID Role</th>
                                         <th>Kode Area</th>
+                                        <th>Nama Area</th>
+                                        <th>Area Zone</th>
+                                        <th>Status</th>
+                                        <th>Konfirmasi</th>
                                         <th colspan="1">Detail</th>
                                         <th>Hapus</th>
                                         <th>Edit</th>
@@ -41,6 +47,28 @@
                                             <td> <?php echo $cu->USERNAME ?></td>
                                             <td> <?php echo $cu->role_id ?></td>
                                             <td> <?php echo $cu->AREA_KODE ?></td>
+                                            <td> <?php echo $cu->AREA_NAMA ?></td>
+                                            <td> <?php echo $cu->AREA_ZONE ?></td>
+                                            <td> 
+                                                <?php  if($cu->USER_STATUS == "0"){ ?>
+                                                    <span class="alert alert-danger">Nonaktif</span>
+                                                    <?php }else{ ?>
+                                                        <span class="alert alert-info">Aktif</span>
+
+                                                        <?php }  ?>
+
+                                            </td>
+                                            <td>
+                                            <?php  if($cu->USER_STATUS == "0"){ ?>
+                                                <a href="<?php echo base_url("crud_user/aktif/$cu->USERNAME")  ?>" class="btn btn-primary">Aktifkan</a>
+
+                                                    <?php }else{ ?>
+                                                        <a href="<?php echo base_url("crud_user/non/$cu->USERNAME")  ?>" class="btn btn-warning">Nonaktifkan</a>
+
+
+                                                        <?php }  ?>
+
+                                            </td>
                                             <td><?php echo anchor('crud_user/detail_crud_user/' . $cu->USERNAME, '<div class="btn btn-success btn-sm"><i class="fa fa-search-plus"></i></div>') ?></td>
                                             <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('crud_user/hapus/' . $cu->USERNAME, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
                                             <td><?php echo anchor('crud_user/edit_crud_user/' . $cu->USERNAME, '<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
